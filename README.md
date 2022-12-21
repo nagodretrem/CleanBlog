@@ -17,3 +17,11 @@
 5. Views klasörü oluşturalım ve tüm .html dosyalarımız views klasörü içerisinde .ejs dosyalarına çevirelim.
 6. Partials klasör yapısını oluşturalım.
 7. İlgili yönlendirmeleri ve \_navigation.ejs klasöründeki link düzenlemelerini yapalım.
+
+## Clean Blog Projesi 3. Bölüm
+
+1. cleanblog-test-db adında bir veri tabanı için mongoose ile gerekli bağlantı bilgilerini yazalım.
+2. "Add New Post" sayfamızdan göndericeğimiz veriler req.body ile yakalayalım, gerekli middleware fonksiyonarını kullanalım.
+3. title:String, detail:String, dateCreated:Date(default now özelliklerine sahip Post modelini oluşturalım.
+4. Veri tabanımızda 3 adet pos dökümanı oluşturalım.
+5. Oluşturduğumuz post dökümanlarını Blog sitemizin anasayfasında gösterelim.
