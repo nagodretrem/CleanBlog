@@ -25,3 +25,10 @@
 3. title:String, detail:String, dateCreated:Date(default now özelliklerine sahip Post modelini oluşturalım.
 4. Veri tabanımızda 3 adet pos dökümanı oluşturalım.
 5. Oluşturduğumuz post dökümanlarını Blog sitemizin anasayfasında gösterelim.
+
+## Clean Blog Projesi 4. Bölüm
+
+1. index.ejs içerisinde /posts/<%= posts[i].\_id %> ile \_id bilgisini gönderelim.
+2. app.js içerisinde GET metoduyla "/posts/:id" ile gönderilen "\_id" yi yakalayalım.
+3. tekil post bilgilerini post.ejs dosyasına gönderelim.
+4. post.ejs içerisine post.title, post.detail ve post.dateCreated bilgilerini gönderelim. (her bir post için ayrı image kullanmayacağız)
