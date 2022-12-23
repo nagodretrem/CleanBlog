@@ -39,3 +39,7 @@
 2. Herhangi bir post verisini güncellemek için gerekli çalışmaları yapalım.
 3. Herhangi bir post verisini silmek için gerekli çalışmaları yapalım.
 4. Kodumuzu MVC yapısına göre tekrar düzenleyelim.
+
+## Clean Blog Projesi 6. Bölüm
+1. Uygulamamızı Render ve MongoDB Atlas ücresiz servislerini kullanarak yükleyelim.
+
