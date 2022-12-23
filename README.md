@@ -32,3 +32,10 @@
 2. app.js içerisinde GET metoduyla "/posts/:id" ile gönderilen "\_id" yi yakalayalım.
 3. tekil post bilgilerini post.ejs dosyasına gönderelim.
 4. post.ejs içerisine post.title, post.detail ve post.dateCreated bilgilerini gönderelim. (her bir post için ayrı image kullanmayacağız)
+
+## Clean Blog Projesi 5. Bölüm
+
+1. post.ejs template içerisinde UPDATE ve DELETE butonu oluşturalım.
+2. Herhangi bir post verisini güncellemek için gerekli çalışmaları yapalım.
+3. Herhangi bir post verisini silmek için gerekli çalışmaları yapalım.
+4. Kodumuzu MVC yapısına göre tekrar düzenleyelim.

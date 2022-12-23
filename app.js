@@ -1,8 +1,9 @@
 const express = require('express');
 const conn = require('./db');
+const methodOverride = require('method-override');
 const dotenv = require('dotenv');
-const ejs = require('ejs');
-const Post = require('./models/Post');
+const postController = require('./controllers/postController');
+const pageController = require('./controllers/pageController');
 
 dotenv.config();
 
@@ -18,26 +19,23 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(
+  methodOverride('_method', {
+    methods: ['POST', 'GET'],
+  }),
+);
 
 //Routes
-app.get('/', async (req, res) => {
-  const posts = await Post.find();
-  res.render('index', { posts });
-});
-app.get('/posts/:id', async (req, res) => {
-  const post = await Post.findById(req.params.id);
-  res.render('post', { post });
-});
-app.get('/about', (req, res) => {
-  res.render('about');
-});
-app.get('/add', (req, res) => {
-  res.render('add');
-});
-app.post('/posts', async (req, res) => {
-  await Post.create(req.body);
-  res.redirect('/');
-});
+app.get('/', postController.getAllPosts);
+app.get('/posts/:id', postController.getPost);
+app.post('/posts', postController.createPost);
+app.put('/posts/:id', postController.updatePost);
+app.delete('/posts/:id', postController.deletePost);
+
+app.get('/about', pageController.getAboutPage);
+app.get('/add', pageController.getAddPage);
+app.get('/posts/edit/:id', pageController.getEditPage);
+
 const port = process.env.PORT;
 
 app.listen(port, () => {
